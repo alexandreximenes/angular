@@ -16,7 +16,7 @@
                     </span>
     
                     <!-- campo para filtrar pelo titulo -->
-                    <input class="form-control" placeholder="filtrar pelo título da foto">
+                    <input #textoProcurado (keyup)="0" class="form-control" placeholder="filtrar pelo título da foto">
                 </div>
             </form>
         </div>
@@ -24,9 +24,9 @@
     </div>
     <!-- fim row -->
     <br>
-
+    <p>{{textoProcurado.value}}</p>
     <div class="row">
-        <painel *ngFor="let foto of fotos" [titulo]="foto.titulo" class="col-md-2">
+        <painel *ngFor="let foto of fotos | filtrarPorTitulo: textoProcurado.value" [titulo]="foto.titulo | uppercase" class="col-md-2">
             <foto [titulo]="foto.titulo" [url]="foto.url"> </foto>
         </painel>
     </div>
