@@ -1,10 +1,12 @@
-import { NgModule } from "@angular/core";
-import { FotoComponent } from "./foto.component";
-import { FiltrarPorTitulo } from "./foto.pipes";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FotoComponent } from './foto.component';
+// import { FiltroPorTitulo } from './foto.pipes';
 
 @NgModule({
-    declarations: [FotoComponent, FiltrarPorTitulo],
-    exports: [FotoComponent, FiltrarPorTitulo]
+  imports: [ CommonModule ],
+  declarations: [ FotoComponent ],
+  exports: [FotoComponent]
 })
 
-export class FotoModule{}
+export class FotoModule { }
