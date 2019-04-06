@@ -1,0 +1,11 @@
+var message = "Alerta de segurança";
+console.log(message);
+var serie = 1;
+console.log(serie);
+serie += serie;
+console.log(serie);
+var qualquerValor;
+console.log(qualquerValor = 10);
+console.log(qualquerValor = "alexandre");
+var tamanho = function (tam) { return tam < 10; };
+console.log(tamanho);

@@ -1,0 +1,3 @@
+tsc app.ts
+tsc -w
+node dist/app
