@@ -2,5 +2,12 @@
     <h1 class="text-center">Sistema de fotos</h1>
 </div>
 <div class="container">
-   <foto></foto>
+   <div class="row">
+        <painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}" class="col-md-2">
+            <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto> 
+        </painel>
+   </div>
+ 
+   <text></text>
+   <cadastro></cadastro>
 </div>
