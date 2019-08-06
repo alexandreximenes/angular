@@ -9,18 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var cadastro_component_1 = require('./cadastro.component');
-var CadastroModule = (function () {
-    function CadastroModule() {
+var http_1 = require('@angular/http');
+var ListagemComponent = (function () {
+    function ListagemComponent(http) {
+        var _this = this;
+        this.fotos = [];
+        http
+            .get('v1/fotos')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (fotos) { return _this.fotos = fotos; }, function (error) { return console.log(error); });
     }
-    CadastroModule = __decorate([
-        core_1.NgModule({
-            declarations: [cadastro_component_1.CadastroComponent],
-            exports: [cadastro_component_1.CadastroComponent]
+    ListagemComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'listagem',
+            templateUrl: './listagem.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], CadastroModule);
-    return CadastroModule;
+        __metadata('design:paramtypes', [http_1.Http])
+    ], ListagemComponent);
+    return ListagemComponent;
 }());
-exports.CadastroModule = CadastroModule;
-//# sourceMappingURL=cadastro.module.js.map
+exports.ListagemComponent = ListagemComponent;
+//# sourceMappingURL=listagem.component.js.map

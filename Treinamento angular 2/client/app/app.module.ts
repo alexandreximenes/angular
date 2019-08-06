@@ -5,16 +5,15 @@ import {FotoModule} from './foto/foto.module'
 import {TextModule} from './text/text.module'
 import {HttpModule} from '@angular/http'
 import {PainelModule} from './painel/painel.module'
-import {CadastroModule} from './cadastro/cadastro.module'
+import {CadastroComponent} from './cadastro/cadastro.component'
+import {ListagemComponent} from './listagem/listagem.component'
+import {routing} from './app.routes'
 import 'rxjs/add/operator/map'
 
 
-
 @NgModule({
-    imports: [BrowserModule, FotoModule, TextModule, HttpModule, PainelModule, CadastroModule],
-    declarations: [AppComponent],
+    imports: [BrowserModule, FotoModule, TextModule, HttpModule, PainelModule, routing],
+    declarations: [AppComponent, CadastroComponent, ListagemComponent],
     bootstrap: [AppComponent]
 })
-export class AppModule{
-
-}
+export class AppModule{}

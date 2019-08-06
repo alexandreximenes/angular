@@ -15,15 +15,17 @@ var foto_module_1 = require('./foto/foto.module');
 var text_module_1 = require('./text/text.module');
 var http_1 = require('@angular/http');
 var painel_module_1 = require('./painel/painel.module');
-var cadastro_module_1 = require('./cadastro/cadastro.module');
+var cadastro_component_1 = require('./cadastro/cadastro.component');
+var listagem_component_1 = require('./listagem/listagem.component');
+var app_routes_1 = require('./app.routes');
 require('rxjs/add/operator/map');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule, text_module_1.TextModule, http_1.HttpModule, painel_module_1.PainelModule, cadastro_module_1.CadastroModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule, text_module_1.TextModule, http_1.HttpModule, painel_module_1.PainelModule, app_routes_1.routing],
+            declarations: [app_component_1.AppComponent, cadastro_component_1.CadastroComponent, listagem_component_1.ListagemComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
