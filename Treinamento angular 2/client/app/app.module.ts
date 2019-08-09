@@ -7,12 +7,13 @@ import {HttpModule} from '@angular/http'
 import {PainelModule} from './painel/painel.module'
 import {CadastroComponent} from './cadastro/cadastro.component'
 import {ListagemComponent} from './listagem/listagem.component'
+import {FormsModule} from '@angular/forms';
 import {routing} from './app.routes'
 import 'rxjs/add/operator/map'
 
 
 @NgModule({
-    imports: [BrowserModule, FotoModule, TextModule, HttpModule, PainelModule, routing],
+    imports: [BrowserModule, FotoModule, TextModule, HttpModule, PainelModule, routing, FormsModule],
     declarations: [AppComponent, CadastroComponent, ListagemComponent],
     bootstrap: [AppComponent]
 })

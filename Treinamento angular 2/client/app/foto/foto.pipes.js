@@ -13,6 +13,7 @@ var FiltroPorTitulo = (function () {
     function FiltroPorTitulo() {
     }
     FiltroPorTitulo.prototype.transform = function (fotos, digitado) {
+        return fotos;
         return fotos.filter(function (foto) { return foto.titulo.toLowerCase().includes(digitado.toLowerCase()); });
     };
     FiltroPorTitulo = __decorate([
