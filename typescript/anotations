@@ -1,0 +1,12 @@
+npm install -g @angular/cli
+ng -v
+
+npm install typescript -g
+tsc -v
+
+Compilar manualmente.
+tsc app.ts
+tsc -w //monitorar os arquivos com mudanças.
+
+para executar o arquivo
+node app
