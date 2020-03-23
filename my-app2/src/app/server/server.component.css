@@ -1,0 +1,16 @@
+.saida{
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+}
+.conteudo{
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+.semconteudo{
+    color: gainsboro;
+    font-weight: bold;
+    font-size: 2em;
+}

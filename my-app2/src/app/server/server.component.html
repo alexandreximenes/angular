@@ -1,0 +1,57 @@
+<h1>Server component</h1>
+
+<div class="form-group">
+
+    <div class="row">
+        <input 
+        class="form-control" 
+        type="text"
+        (input)=updateInput($event)
+        [(ngModel)]="saida"
+        autofocus
+        />
+    </div>
+
+    <div class="row">
+        <button 
+        (click)="addPlusText()"
+        class=btn btn-warning>
+        Add text
+        </button>
+    </div>
+
+    <div class="row">
+        <button 
+        class="btn btn-success"
+        (click)="toggleButton()">
+        Botao 1
+    </button>   
+
+    <button 
+        class="btn btn-primary" 
+        [disabled]="disabled">
+        Botao 2
+    </button> 
+    
+    <button 
+        class="btn btn-default" 
+        (click)="clear($event)"
+        [disabled]="saida == ''">
+        Clear
+    </button>
+
+    </div>
+    
+    <div *ngIf="saida != ''; else noContent">
+        <p *ngFor="let s of server">
+           <span [ngClass]="{conteudo: existeConteudo()}">  Com conteudo: {{  saida }} </span>
+        </p>
+    </div>
+
+</div>
+
+<ng-template #noContent>
+    <p [ngClass]="{semconteudo: naoExisteConteudo()}">
+        Sem conteudo
+    </p>
+</ng-template>
